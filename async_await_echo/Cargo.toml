@@ -1,0 +1,15 @@
+[package]
+name = "async_await_echo"
+version = "0.1.0"
+authors = ["nicholasnjihia"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# THe futures library enables us to write async code. 
+# Enabling the compat feature enables the inclusion of functions for using futures 0.3 and async/await with Hyper which uses futures 0.1
+futures = {version="0.3",features=["compat"]}
+hyper="0.12.9"
+# Hyper is our asynchronous HTTP library.We'll use it to power our HTTP server and to make HTTP requests
+
